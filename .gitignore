@@ -1,0 +1,17 @@
+# MATLAB
+*.asv
+*.autosave
+*.m~
+slprj/
+sccprj/
+octave-workspace
+*.mat~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
