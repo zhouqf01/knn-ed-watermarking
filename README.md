@@ -1,16 +1,6 @@
-# A_KNN_ED — K-Nearest-Neighbour Euclidean-Distance Zero-Watermarking
+# Zero Watermarking for Vector Geographic Point Data Based on K-NN and Edit Distance
 
-Reference MATLAB implementation of the zero-watermarking algorithm
-proposed in the manuscript
-
-> *(paper title to be added on acceptance)*
-
-The algorithm constructs a binary zero-watermark from the geometric
-relationships among a vector point set's K nearest neighbours, using
-the relative magnitudes of the three nearest Euclidean distances.
-Only the proposed algorithm is released here; the comparison methods
-and the auxiliary experimental scripts used in the paper are kept in
-a separate working repository.
+Zero watermarking plays a critical role in the copyright protection of vector geographic data because it does not distort the original data. However, extracting stable features from point data remains a challenging problem due to its structural simplicity compared with polylines and polygons. Existing methods rely on partitioning the point set into spatial groups and deriving watermark bits from group-level statistics. Such partition-dependent approaches are vulnerable to vertex deletion and insertion attacks because these attacks disrupt the partition structure. To address this issue, a zero watermarking method based on K-nearest neighbors (K-NN) and edit distance is proposed. For each point, its three nearest neighbors are retrieved and the relative magnitude among the sorted distances is quantified into a binary digit. The digits of all points are arranged by the third-nearest distance to form the watermark sequence. Edit distance is employed as the similarity metric for watermark detection, naturally accommodating the variable-length watermarks caused by deletion and insertion attacks. Experiments show that the proposed method achieves a similarity of 1.00 under rotation, uniform scaling, and translation attacks. Under vertex deletion up to 7% and insertion up to 9%, the similarity remains above the 0.75 threshold, outperforming existing partition-based methods under identical conditions. The uniqueness of the watermark is also verified through pairwise comparison of 100 randomly generated datasets.
 
 ## Repository contents
 
