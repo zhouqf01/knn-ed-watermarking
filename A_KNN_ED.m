@@ -1,7 +1,7 @@
 function w = A_KNN_ED(s)
 % A_KNN_ED  Generate a zero-watermark from a vector point set using the
 %           K-Nearest-Neighbour Euclidean-Distance feature proposed in the
-%           accompanying manuscript.
+%           accompanying manuscript. Implement Eq. (10)–(11).
 %
 %   w = A_KNN_ED(s) takes a shapefile structure s (as returned by
 %   MATLAB's shaperead) whose geometry consists of 2D points, and
@@ -28,7 +28,7 @@ function w = A_KNN_ED(s)
     assert(all(ds(:,1) <= ds(:,2)) && all(ds(:,2) <= ds(:,3)));
 
     % sort rows by the largest of the three distances, descending
-    [~, order] = sort(ds(:,3), 'descend');
+    [~, order] = sortrows(ds, [-3 -2 -1]);
     ds  = ds(order, :);
     ids = ids(order, :);
 
