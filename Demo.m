@@ -2,7 +2,7 @@
 % Minimal demonstration of the proposed K-Nearest-Neighbour
 % Euclidean-Distance zero-watermarking algorithm (A_KNN_ED).
 %
-% Loads the sample point shapefile in ./data-poi, generates the
+% Loads the sample point shapefile in ./data-sample, generates the
 % zero-watermark with the proposed algorithm, and prints its length
 % and the first 32 bits.
 %
@@ -14,8 +14,8 @@
 
 clear; clc;
 
-fprintf('Loading point set from ./data-poi/a.shp ...\n');
-s = shaperead(fullfile('data-poi', 'a.shp'));
+fprintf('Loading point set from ./data-sample/a.shp ...\n');
+s = shaperead(fullfile('data-sample', 'a.shp'));
 
 fprintf('Generating zero-watermark with A_KNN_ED ...\n');
 w = A_KNN_ED(s);

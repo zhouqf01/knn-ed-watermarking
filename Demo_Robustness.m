@@ -4,7 +4,7 @@
 %   - Random addition of a fraction of points (uniformly inside the
 %     bounding box of the original point set)
 %
-% The original point set is loaded from ./data-poi/a.shp, the
+% The original point set is loaded from ./data-sample/a.shp, the
 % zero-watermark w0 is generated, then for each attack ratio the
 % attacked set is built, its watermark w1 is generated, and the
 % similarity getsim2(w0, w1) is reported.
@@ -14,8 +14,8 @@
 
 clear; clc;
 
-fprintf('Loading original point set from ./data-poi/a.shp ...\n');
-s0 = shaperead(fullfile('data-poi', 'a.shp'));
+fprintf('Loading original point set from ./data-sample/a.shp ...\n');
+s0 = shaperead(fullfile('data-sample', 'a.shp'));
 
 fprintf('Generating reference watermark w0 ...\n');
 w0 = A_KNN_ED(s0);

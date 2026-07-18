@@ -11,10 +11,10 @@ Zero watermarking plays a critical role in the copyright protection of vector ge
 | `getsim2.m`                    | Edit-distance based similarity used by the manuscript                      |
 | `FtDeleteByStorageRandom.m`    | Random deletion attack on a point feature set                              |
 | `FtAddByStorageRandom.m`       | Random addition attack on a point feature set                              |
-| `Demo.m`                       | Minimal example: load `data-poi`, run the algorithm, print the watermark   |
+| `Demo.m`                       | Minimal example: load `data-sample`, run the algorithm, print the watermark   |
 | `Demo_Uniqueness.m`            | Uniqueness experiment over 100 independent point sets in `data-random/`    |
-| `Demo_Robustness.m`            | Robustness experiment: deletion and addition attacks on `data-poi/a.shp`   |
-| `data-poi/`                    | Original point shapefile used as the watermark carrier                     |
+| `Demo_Robustness.m`            | Robustness experiment: deletion and addition attacks on `data-sample/a.shp`   |
+| `data-sample/`                    | Original point shapefile used as the watermark carrier                     |
 | `data-random/`                 | 100 independently generated point sets used **only** for the uniqueness test |
 
 ## Requirements
@@ -32,7 +32,7 @@ Clone the repository, open MATLAB, `cd` to the repository folder, then run:
 ```matlab
 >> Demo               % single-shapefile watermark generation
 >> Demo_Uniqueness    % pairwise similarity across 100 independent datasets
->> Demo_Robustness    % deletion and addition robustness on data-poi/a.shp
+>> Demo_Robustness    % deletion and addition robustness on data-sample/a.shp
 ```
 
 ## Using the algorithm in your own code
