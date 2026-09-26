@@ -44,9 +44,8 @@ w = A_KNN_ED(s);     % w is an int32 binary watermark
 
 ## Citation
 
-If this code helps your research, please cite the accompanying
-manuscript (full bibliographic information will be added upon
-publication).
+If this code helps your research, please cite the paper
+Qifei Zhou, Jiahui Jiao, Le Yang, Na Ren, Changqing Zhu. (2027). Zero watermarking for vector geographic point data based on K-NN and edit distance. Computers & Geosciences. DOI: [10.1016/j.cageo.2026.106275](https://doi.org/10.1016/j.cageo.2026.106275)
 
 ## Contact
 
